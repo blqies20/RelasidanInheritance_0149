@@ -1,19 +1,22 @@
 #ifndef IBU_H
 #define IBU_H
 
+#include <iostream>
+#include <vector>
+#include "anak.h"
+using namespace std;
+
 class ibu
 {
     public:
         string nama;
-        vector<nama*> daftar_anak;
+        vector<anak*> daftar_anak;
 
-        ibu(string nama): nama(pNama)
-        {
+        ibu(string pNama): nama(pNama){
             cout << "Ibu \"" << nama << "\" ada\n";
         }
 
-        ~ibu()
-        {
+        ~ibu(){
             cout << "Ibu \"" << nama << "\" tidak ada\n";
         }
 
@@ -29,8 +32,7 @@ void ibu::cetakAnak(){
     //for (auto& a : daftar_anak) {
     //  cout << a-->nama << "\n";
     //}
-    for (int i = 0; i < daftar_anak.size(); i++)
-    {
+    for (int i = 0; i < daftar_anak.size(); i++){
         cout << daftar_anak[i]->nama << endl;
     }
     cout << endl;
